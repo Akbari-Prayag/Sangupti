@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Sangupti/static/css/main.1ddfb521.css",
+    "main.css": "/Sangupti/static/css/main.3073409b.css",
     "main.js": "/Sangupti/static/js/main.d3117f58.js",
     "index.html": "/Sangupti/index.html",
-    "main.1ddfb521.css.map": "/Sangupti/static/css/main.1ddfb521.css.map",
+    "main.3073409b.css.map": "/Sangupti/static/css/main.3073409b.css.map",
     "main.d3117f58.js.map": "/Sangupti/static/js/main.d3117f58.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ddfb521.css",
+    "static/css/main.3073409b.css",
     "static/js/main.d3117f58.js"
   ]
 }
