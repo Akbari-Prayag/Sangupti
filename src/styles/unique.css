@@ -1,7 +1,7 @@
 :root {
   --bg-gradient: linear-gradient(135deg, #0f172a, #1e3a8a);
-  --card-bg: #ffffff0a;
-  --card-border: #ffffff15;
+  --card-bg: #fefafa0a;
+  --card-border: #f8f5f515;
   --text-primary: #f1f5f9;
   --text-muted: #cbd5e1;
   --accent: #3b82f6;

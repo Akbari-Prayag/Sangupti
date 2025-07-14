@@ -5,13 +5,14 @@
   --cloud-subtext: #5a6a8a;
   --cloud-shadow: rgba(0, 0, 0, 0.06);
   --cloud-highlight: rgba(100, 180, 255, 0.15);
-  --sky-color: linear-gradient(to bottom, #eaf3ff, #dce7f5);
+  --sky-color: linear-gradient(to bottom, #adc3e0, #93b5e2);
 }
 
 .features {
   background: var(--sky-color);
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 
