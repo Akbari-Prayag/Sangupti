@@ -1,0 +1,115 @@
+:root {
+  --cloud-bg: rgba(255, 255, 255, 0.88);
+  --cloud-border: rgba(180, 200, 230, 0.4);
+  --cloud-text: #2b3a55;
+  --cloud-subtext: #5a6a8a;
+  --cloud-shadow: rgba(0, 0, 0, 0.06);
+  --cloud-highlight: rgba(100, 180, 255, 0.15);
+  --sky-color: linear-gradient(to bottom, #eaf3ff, #dce7f5);
+}
+
+.features {
+  background: var(--sky-color);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Cloud Bubble Shape */
+.feature-item {
+  background: var(--cloud-bg);
+  border: 1px solid var(--cloud-border);
+  box-shadow:
+    0 10px 25px var(--cloud-shadow),
+    inset 0 0 20px var(--cloud-highlight);
+  border-radius: 100px;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  clip-path: ellipse(75% 50% at 50% 50%);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  gap: 2.5rem 2rem;
+
+
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.1),
+    inset 0 0 30px var(--cloud-highlight);
+}
+
+/* Headings & Paragraphs */
+.feature-item h3 {
+  font-size: 1.6rem;
+  color: var(--cloud-text);
+  margin-bottom: 1rem;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.feature-item p {
+  color: var(--cloud-subtext);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Animated Smoke */
+.cloud-smoke {
+  position: absolute;
+  background: radial-gradient(ellipse at center, rgba(170, 200, 255, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(22px);
+  animation: smokeRise 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cloud-smoke:nth-child(1) {
+  top: -30px;
+  left: 25%;
+  width: 120px;
+  height: 60px;
+  animation-delay: 0s;
+}
+
+.cloud-smoke:nth-child(2) {
+  top: -40px;
+  left: 60%;
+  width: 100px;
+  height: 50px;
+  animation-delay: 2s;
+}
+
+/* Optional Raindrop (disabled unless needed) */
+.raindrop {
+  display: none;
+}
+
+/* Animations */
+@keyframes smokeRise {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0) scale(0.9);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-30px) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.15);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes waterFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
